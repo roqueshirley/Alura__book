@@ -1,0 +1,30 @@
+.carrossel__titulo {
+    background-color: var(--white-background);
+    font-size: var(--font-size-title);
+    font-weight: var(--font-weight-title);
+    color: var(--text-orange);
+    text-transform: uppercase;
+    align-items: center;
+    justify-content: center; /* alinhar o texto ao centro */
+    display: flex; /* alinhar o texto ao centro */
+    padding: 1em 0 0.5em 0; /* espaçamento interno */
+    margin: 0; /* espaçamento externo */
+}
+
+.swiper-slide img {
+    width: 100%;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    display: none;
+}
+
+.swiper-pagination {
+    position: initial;
+    margin: 0.5em 0;
+}
+
+.swiper-pagination-bullet {
+    background-color: var(--text-orange);
+}

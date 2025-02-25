@@ -1,0 +1,76 @@
+.cabecalho__menu-hamburguer {
+    width: 24px;
+    height: 24px;
+    background-image: url('../assets/Menu.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+}
+
+.cabecalho {
+    background-color:var(--white-background);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; /* Para liberar o position absolute do menu */
+    margin: 0;
+    padding: 8px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.lista_menu {
+    display: none;/* Para o menu ficar oculto */
+    position: absolute; /* Para o menu ficar sobre o conteúdo */
+    top: 100%; /* Para o menu ficar abaixo do cabeçalho */
+    width: 70vw;
+    left: 0; /* Para o menu ficar alinhado à esquerda */
+    text-decoration: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.container_botao:checked ~ .lista_menu {
+    display: block; /* Para o menu ficar visível */
+    flex-direction: column;
+    gap: 10px;
+}
+
+.container_botao:checked + .cabecalho__menu-hamburguer {
+    background-color: var(--blue-gradient); /* Fundo gradiente azul */
+    background-image: none; /* Remove a imagem do ícone */
+    color: white; /* Muda a cor do ícone para branco */
+}
+
+.lista-menu__titulo, .lista-menu__item {
+    background-color: var(--white-background);
+    padding: 1em;
+    text-decoration: none;
+    list-style: none;
+}
+
+.lista-menu__titulo {
+    color: var(--text-orange);
+    font-size: var(--font-size-subtitle);
+    font-weight: var(--font-weight-title);
+}
+
+.lista-menu__link {
+    color: var(--blue-gradient);
+    -webkit-background-clip: text; /* Para o gradiente ficar dentro do texto */
+    /*-webkit-text-fill-color: transparent; /* Para o texto ficar transparente */
+    background-clip: text; /* Para o gradiente ficar dentro do texto */
+    font-size: var(font-size-subtitle);
+    font-weight: var(--font-weight-text);
+    text-decoration: none;
+}
+
+.container_botao {
+    display: none; /* Para o botão ficar oculto */
+}

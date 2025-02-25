@@ -1,0 +1,38 @@
+.banner {
+    background: var(--gradient-blue);
+    color: var(--text-white);
+    padding: 2.5em 2em;
+    text-align: center;
+}
+
+.banner__title{
+    font-size: var(--font-weight-title);
+    font-weight: var(--font-weight-title);
+}
+
+.banner__text {
+    font-weight: var(--font-weight-subtitle);
+    margin: 1em 0;
+}
+
+.banner__search{
+    background-color: transparent;
+    border: 1px solid var(--text-white);
+    color: var(--text-white);
+    border-radius: 24px;
+    padding: 1em;
+    width: 100%;
+}
+
+.banner__search::placeholder {
+    color: var(--text-white);
+    font-family: var(font-family);
+    font-size: var(--font-size-text);   
+    font-weight: var(--font-size-text);
+    text-align: center;
+    background: url(../assets/Pesquisa.svg) no-repeat; /* Adiciona ícone de pesquisa */
+    background-position: 2.5em center; /* Posiciona o ícone de pesquisa */
+    padding-left: 2em; /* Afasta o texto do ícone de pesquisa */
+}
+
+
