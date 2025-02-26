@@ -13,6 +13,7 @@
 .banner__text {
     font-weight: var(--font-weight-subtitle);
     margin: 1em 0;
+    line-height: 1em;
 }
 
 .banner__search{
