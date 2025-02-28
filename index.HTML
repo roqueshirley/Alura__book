@@ -55,33 +55,40 @@
 </section>
 
 <section class="carrossel">
-    <h2 class="carrossel__titulo">últimos lançamentos</h2>
+    <h2 class="carrossel__titulo">novos lançamentos</h2>
 
     <!-- Slider main container -->
 <div class="swiper">
     <!-- Additional required wrapper -->
+        <!-- If we need pagination -->
+    <div class="swiper-pagination"></div> <!--colocar esse trecho na posição que quer a paginação do carrossel-->
     <div class="swiper-wrapper">
         <!-- Slides -->
-        <div class="swiper-slide"> <img src="assets/ApacheKafka.svg" alt="Apache Kafta e Spring Boot"></div>
+        <div class="swiper-slide"> <img src="assets/ApacheKafka.svg" alt="Livro sobre Apache Kafta e Spring Boot"></div>
         <div class="swiper-slide"><img src="assets/Guia Front-end.svg" alt="Guia Front-End"></div>
-        <div class="swiper-slide"><img src="assets/Javascript.svg" alt="Javascript Assertivo"></div>
+        <div class="swiper-slide"><img src="assets/Javascript.svg" alt="Livro sobre Javascript Assertivo"></div>
         <div class="swiper-slide"><img src="assets/Portugol.svg" alt="Lógica de Programação com Portugol"></div>
-        <div class="swiper-slide"><img src="assets/ReactNative.svg" alt="React Native"></div>
+        <div class="swiper-slide"><img src="assets/ReactNative.svg" alt="Livro sobre React Native"></div>
     </div>
-    <!-- If we need pagination -->
-    <div class="swiper-pagination"></div>
 
     <!-- If we need navigation buttons -->
     <div class="swiper-button-prev"></div>
     <div class="swiper-button-next"></div>
-
-    <!-- If we need scrollbar -->
-    <div class="swiper-scrollbar"></div>
 </div>
 </section>
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="swiper.js"></script>
+
+<script>
+    const swiper = new Swiper('.swiper', {
+    spaceBetween: 10,
+    slidesPerView: 3,
+    pagination: {
+        el:'.swiper-pagination',
+        type: 'bullets',
+    }
+});
+</script>
 
 </body>
 </html>
