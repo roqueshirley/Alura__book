@@ -1,6 +1,9 @@
 @import url("styles/header.css");
 @import url("styles/banner.css");
 @import url("styles/carrossel_novo.css");
+@import url("styles/tópicos.css");
+@import url("styles/contato.css");
+@import url("styles/footer.css");
 
 
 :root {
@@ -8,6 +11,7 @@
     --text-white:#fff;
     --text-black:#000;
     --text-orange:#EB9B00;
+    --blue: #002F52;
     --gradient-blue: linear-gradient(98deg, #002F52 35.49%, #326589 165.37%);
     --font-size-title: 18px;
     --font-size-subtitle: 16px;

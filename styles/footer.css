@@ -1,0 +1,11 @@
+hr {
+    margin: 0;
+}
+
+.rodapé {
+    background-color: var(--white-background);
+    padding: 1em;
+    font-size: var(--font-size-subtitle);
+    font-weight: var(--font-weight-text);   
+    color: var(--text-black);
+}
