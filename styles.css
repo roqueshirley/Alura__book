@@ -16,7 +16,8 @@
     --font-size-title: 18px;
     --font-size-subtitle: 16px;
     --font-size-text: 14px;
-    --font-family: "Poppins", sans-serif;
+    --font-principal: "Poppins", sans-serif;
+    --font-secundaria: "Josefin Sans", sans-serif;
     --font-weight-title: 700;
     --font-weight-subtitle: 500;
     --font-weight-text: 400;
@@ -24,6 +25,7 @@
 
 
 body{
+    background-color: #C4C4C4;
     margin: 0;
     font-family: var(--font-family);
     font-size: var(--font-size-subtitle);

@@ -27,13 +27,28 @@
 
 .banner__search::placeholder {
     color: var(--text-white);
-    font-family: var(font-family);
+    font-family: var(font-principal);
     font-size: var(--font-size-text);   
     font-weight: var(--font-size-text);
     text-align: center;
     background: url(../assets/Pesquisa.svg) no-repeat; /* Adiciona ícone de pesquisa */
-    background-position: 2.5em center; /* Posiciona o ícone de pesquisa */
-    padding-left: 2em; /* Afasta o texto do ícone de pesquisa */
+    background-position: 1em;
 }
+
+@media screen and (min-width: 768px) {
+    .banner__title {
+        font-size: 36px;
+    }
+
+    .banner__search {
+        width: 50%;
+    }
+
+    .banner__search::placeholder {
+        background-position: 7em;
+    }
+}
+    
+
 
 

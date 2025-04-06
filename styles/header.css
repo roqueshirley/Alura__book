@@ -13,33 +13,28 @@
     justify-content: space-between;
     align-items: center;
     position: relative; /* Para liberar o position absolute do menu */
-    margin: 0;
-    padding: 8px;
 }
 
 .container {
     display: flex;
     align-items: center;
-    gap: 10px;
+}
+
+.container__imagem {
+    padding: 1em; /* Para dar espaço entre a imagem e o texto */
 }
 
 .lista_menu {
     display: none;/* Para o menu ficar oculto */
     position: absolute; /* Para o menu ficar sobre o conteúdo */
     top: 100%; /* Para o menu ficar abaixo do cabeçalho */
-    width: 70vw;
-    left: 0; /* Para o menu ficar alinhado à esquerda */
+    width: 60vw; /* Para o menu ficar com 60% da largura da tela */
     text-decoration: none;
     list-style: none;
-    margin: 0;
-    padding: 0;
-    
 }
 
 .container_botao:checked ~ .lista_menu {
     display: block; /* Para o menu ficar visível */
-    flex-direction: column;
-    gap: 10px;
 }
 
 .container_botao:checked + .cabecalho__menu-hamburguer {
@@ -73,4 +68,63 @@
 
 .container_botao {
     display: none; /* Para o botão ficar oculto */
+}
+
+.container__titulo {
+    display: none; /* Para o título ficar oculto */
+}
+
+.opções {
+    display: none; /* Para as opções ficarem ocultas */
+}
+
+@media screen and (min-width: 1024px) {
+    
+    .container__titulo, 
+    .container__titulo--negrito {
+        font-family: var(--font-secundaria);
+        font-size: 30px;
+    }
+
+    .container__titulo {
+        font-weight: 400;
+        display: block; /* Para o título ficar visível */
+    }
+
+    .container__titulo--negrito {
+        font-weight: 700;
+    }
+
+    .opções {
+        display: flex;
+    }
+
+    .opções__item {
+        padding: 0 1em;
+        text-transform: uppercase;
+    }
+
+    .opções__link {
+        color: var(--text-black);
+        text-decoration: none;
+        font-size: var(--font-size-subtitle);
+        font-weight: var(--font-weight-text);
+    }
+
+    .container__imagem-transparente {
+        display: none; /* Para a imagem ficar oculta */
+    }
+
+    .cabecalho__menu-hamburguer {
+        display: none; /* Para o ícone do menu ficar oculto */
+    }
+
+    .opções__botão:checked ~ .lista_menu {
+        display: block; /* Para o menu ficar visível */
+        width: auto;
+    }
+
+    .opções__botão {
+        display: none; /* Para o botão ficar oculto */
+    }
 }
