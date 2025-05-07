@@ -5,6 +5,15 @@
     background-repeat: no-repeat;
     background-position: center;
     display: inline-block;
+    margin: 0 1em;
+}
+
+.container__botao:checked~.container__rotulo>.cabecalho-menu-hamburguer {
+    background-image:url("../assets/menuAberto.svg"); /* Ícone do menu aberto */
+}
+    
+.container__botao:checked~.container__rotulo {
+    background: var(--gradient-blue); /* Fundo gradiente azul */
 }
 
 .cabecalho {
@@ -78,6 +87,9 @@
     display: none; /* Para as opções ficarem ocultas */
 }
 
+.container__texto{
+    display: none;
+}
 @media screen and (min-width: 1024px) {
     
     .container__titulo, 
@@ -126,5 +138,49 @@
 
     .opções__botão {
         display: none; /* Para o botão ficar oculto */
+    }
+
+    .opções__botão:checked~ .opções__rotulo > .opções__item {
+        background: var(--gradient-blue); /* Fundo gradiente azul */
+        color:var(--white-background); /* Cor do texto branco */
+    }
+
+    .opções__item {
+        padding: 2em 1em;
+    }
+
+    .lista-menu__item:hover {
+        background: var(--blue-gradient); /* Cor de fundo azul ao passar o mouse */
+    }
+
+    .lista-menu__item:hover > .lista-menu__link {
+        -webkit-text-fill-color: var(--white-background); /* Cor do texto branco ao passar o mouse */
+        text-decoration: none; /* Remove o sublinhado ao passar o mouse */
+    }
+}
+
+@media screen and (min-width: 1728px) {
+    .container__link {
+        display: flex;
+        align-items: center;
+        padding: 0.6em;
+        text-decoration: none;
+        color: var(--text-black);
+    }
+
+    .container__texto {
+        margin-left: 0.6em;
+    }
+
+    .cabecalho {
+        padding: 0 2em;
+    }
+
+    .opções {
+        margin-right: auto; 
+    }
+
+    .container__texto {
+        display: block;
     }
 }
