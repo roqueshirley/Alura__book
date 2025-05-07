@@ -8,11 +8,11 @@
     margin: 0 1em;
 }
 
-.container__botao:checked~.container__rotulo>.cabecalho-menu-hamburguer {
+.container_botao:checked~.container__rotulo .cabecalho__menu-hamburguer {
     background-image:url("../assets/menuAberto.svg"); /* Ícone do menu aberto */
 }
     
-.container__botao:checked~.container__rotulo {
+.container_botao:checked~.container__rotulo {
     background: var(--gradient-blue); /* Fundo gradiente azul */
 }
 
